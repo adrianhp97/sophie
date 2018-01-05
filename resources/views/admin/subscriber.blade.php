@@ -10,6 +10,7 @@
             <th>Option</th>
         </tr>
       </thead>
+      
 
       <tbody>
         @foreach($subscriber as $sub)
