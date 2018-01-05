@@ -4,9 +4,10 @@
       <div class="col l6 s12">
         <h5 class="white-text">Subscribe</h5>
         <form id="subscribe-form" class="col s11">
+          {{ csrf_field() }}
           <div class="input-field">
             <input id="subscribe" type="email" placeholder="Email" required>
-            <i class="material-icons">email</i>
+            <button><i class="material-icons">email</i></button>
           </div>
         </form>
       </div>

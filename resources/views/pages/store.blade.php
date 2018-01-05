@@ -19,7 +19,7 @@
       </div>
       <div class="col s12 m8 l9">
         @for ($i = 0; $i < 10; $i++)
-          <div class="col s12 m3">
+          <!-- <div class="col s12 m3">
             <div class="custom-card">
               <div class="image">
                 <img src="{{URL::asset('/img/bag.jpeg')}}">
@@ -28,7 +28,8 @@
                 <h5>Name</h5>
               </div>
             </div>
-          </div>
+          </div> -->
+          @include('layouts.product') 
         @endfor
       </div>
     </div>

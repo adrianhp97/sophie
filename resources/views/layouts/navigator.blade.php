@@ -1,7 +1,7 @@
 <!-- Sticky Header -->
 <header class="main_h">
   <div class="row">
-    <a class="logo" href="#">L/F</a>
+    <a class="logo" href="#">Sophie</a>
     <div class="mobile-toggle">
       <span></span>
       <span></span>

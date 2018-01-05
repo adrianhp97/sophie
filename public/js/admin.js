@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	$('.modal').modal();
 	$('.nav-btn').on('click', function(event) {
 		event.preventDefault();
 		/* Act on the event */

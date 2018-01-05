@@ -212,3 +212,8 @@ nav {
 .image-catalogue img{
   width: 100%;
 }
+
+button {
+  background-color: transparent !important;
+  border: none;
+}

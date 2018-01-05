@@ -11,10 +11,6 @@
 |
 */
 
-if (env('APP_ENV') === 'production') {
-    URL::forceSchema('https');
-}
-
 /*
 |--------------------------------------------------------------------------
 | Client Pages
@@ -57,9 +53,7 @@ Route::get('/Dashboard/Login', function () {
     return view('admin.login');
 })->name('dashboard-login');
 
-Route::get('/Dashboard/Subscriber', function () {
-    return view('admin.subscriber');
-})->name('dashboard-subscriber');
+Route::get('/Dashboard/Subscriber', 'SubscriberController@index')->name('dashboard-subscriber');
 
 Route::get('/Dashboard/Member', function () {
     return view('admin.member');
@@ -68,3 +62,14 @@ Route::get('/Dashboard/Member', function () {
 Route::get('/Dashboard/Barang', function () {
     return view('admin.barang');
 })->name('dashboard-barang');
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Ajax Request
+|--------------------------------------------------------------------------
+*/
+Route::post('/insertSubscriber','SubscriberController@store');
+
+Route::post('/deleteSubscriber','SubscriberController@destroy');

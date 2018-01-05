@@ -7,3 +7,8 @@ elixir(function(mix) {
 elixir(function(mix) {
   mix.sass('card.scss');
 });
+
+
+elixir(function(mix) {
+  mix.sass('product.scss');
+});
