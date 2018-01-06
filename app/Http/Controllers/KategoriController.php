@@ -14,7 +14,9 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        return Kategori::all();
+        $kategori = Kategori::all();
+        return view('admin.barang')
+            ->with('kategori', $kategori);
     }
 
     /**

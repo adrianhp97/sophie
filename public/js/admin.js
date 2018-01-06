@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	$('.modal').modal();
+	$('select').material_select();
 	$('.nav-btn').on('click', function(event) {
 		event.preventDefault();
 		/* Act on the event */

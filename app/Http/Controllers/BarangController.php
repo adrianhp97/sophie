@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Barang;
+use App\Kategori;
 use App\KategoriBarang;
 use Illuminate\Http\Request;
 
@@ -27,6 +28,20 @@ class BarangController extends Controller
     public function store(Request $request)
     {
         return Barang::firstOrCreate($request->all());
+    }
+
+    public function store_image(Request $request)
+    {
+        if ($request->hasFile('image_file')) {
+            $extension = $request->image_file->getClientOriginalExtension();
+            $dir = public_path('img') . '/barang';
+            $filename = $request->get('kode_produksi') . '.' . $extension;
+            $request->image_file->move($dir, $filename);
+            // return $request;
+            return 'success';
+        } else {
+            return 'false';
+        }
     }
 
     /**

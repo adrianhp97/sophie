@@ -14,7 +14,7 @@ class SubscriberController extends Controller
      */
     public function index()
     {
-        $subscriber = Subscriber::All()->toArray();
+        $subscriber = Subscriber::Paginate(2);
         return view('admin.subscriber')
             ->with('subscriber', $subscriber);
     }

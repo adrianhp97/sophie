@@ -59,9 +59,7 @@ Route::get('/Dashboard/Member', function () {
     return view('admin.member');
 })->name('dashboard-member');
 
-Route::get('/Dashboard/Barang', function () {
-    return view('admin.barang');
-})->name('dashboard-barang');
+Route::get('/Dashboard/Barang', 'KategoriController@index')->name('dashboard-barang');
 
 
 
@@ -73,3 +71,7 @@ Route::get('/Dashboard/Barang', function () {
 Route::post('/insertSubscriber','SubscriberController@store');
 
 Route::post('/deleteSubscriber','SubscriberController@destroy');
+
+Route::post('/insertBarang','BarangController@store');
+
+Route::post('/insertImage','BarangController@store_image');

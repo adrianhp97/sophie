@@ -2,15 +2,15 @@
 
 @section('content')
 <div class="main-content">
-  <div class="panel-wrapper">
+  <!-- <div class="panel-wrapper"> -->
     <table class="highlight">
+      @if(count($subscriber) >= 0)
       <thead>
         <tr>
             <th>Email</th>
-            <th>Option</th>
+            <th>Delete</th>
         </tr>
       </thead>
-      
 
       <tbody>
         @foreach($subscriber as $sub)
@@ -24,8 +24,19 @@
         </tr>
         @endforeach
       </tbody>
+      <!-- <tr>
+        <td colspan="2">
+          <div class="pagination">{!! str_replace('/?', '?', $subscriber->render()) !!}</div>      
+        </td>
+      </tr> -->
+      @else
+      <tr>
+        <td>No record found</td>
+      </tr>
+      @endif
     </table>
-  
+    
+    {{ $subscriber->links() }}
     <div id="delete_sub" class="modal">
       <div class="modal-content">
         <form id="delete_sub_form">
@@ -35,6 +46,6 @@
         </form>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 </div>
 @endsection
